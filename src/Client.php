@@ -63,7 +63,7 @@ class Client
      * @param string $uri
      * @return string
      */
-    public function url(string $uri): string
+    protected function url(string $uri): string
     {
         return $this->endpoint . '/' . trim($uri, '/');
     }
