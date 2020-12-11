@@ -17,7 +17,11 @@ Then in your PHP project, you can call the API as follows:
                         
 require __DIR__ . '/vendor/autoload.php';
 
-$tap = new Tap\Client('{{ $api_tokens->first()->token }}');
+// It's recommended that you don't hardcode your API key!
+$api_key = 'this-is-your-api-key';
+
+// Instantiate the client
+$tap = new Tap\Client($api_key);
 
 // Log an event for user ID 1234 on item ID 5678
 $tap->log(1234, 5678);
