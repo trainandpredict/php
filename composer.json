@@ -1,0 +1,20 @@
+{
+    "name": "trainandpredict/php",
+    "description": "A PHP package for interacting with our services.",
+    "type": "library",
+    "require": {
+        "kitetail/zttp": "^0.6.0"
+    },
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Jonathan Baldie",
+            "email": "jon@jonbaldie.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tap\\": "src/"
+        }
+    }
+}
