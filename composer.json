@@ -1,6 +1,6 @@
 {
     "name": "trainandpredict/php",
-    "description": "A PHP package for interacting with our services.",
+    "description": "A PHP package for interacting with Train and Predict.",
     "type": "library",
     "require": {
         "kitetail/zttp": "^0.6.0"
