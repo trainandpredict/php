@@ -10,7 +10,7 @@ class Client
     /**
      * @var string
      */
-    protected $api_key;
+    protected $api_token;
 
     /**
      * @var string
@@ -18,11 +18,11 @@ class Client
     protected $endpoint = 'https://trainandpredict.com/api';
 
     /**
-     * @param string $api_key
+     * @param string $api_token
      */
-    public function __construct(string $api_key)
+    public function __construct(string $api_token)
     {
-        $this->api_key = $api_key;
+        $this->api_token = $api_token;
     }
 
     /**
@@ -32,7 +32,7 @@ class Client
      */
     public function log(int $user_id, int $item_id): ZttpResponse
     {
-        return Zttp::post($this->url("/log/{$user_id}/{$item_id}?api_key={$this->api_key}"));
+        return Zttp::post($this->url("/log/{$user_id}/{$item_id}?api_token={$this->api_token}"));
     }
 
     /**
@@ -41,7 +41,7 @@ class Client
      */
     public function recommendationsForItem(int $item_id): ZttpResponse
     {
-        return Zttp::get($this->url("/rec/item/{$item_id}?api_key={$this->api_key}"));
+        return Zttp::get($this->url("/rec/item/{$item_id}?api_token={$this->api_token}"));
     }
 
     /**
@@ -50,7 +50,7 @@ class Client
      */
     public function recommendationsForUser(int $user_id): ZttpResponse
     {
-        return Zttp::get($this->url("/rec/user/{$user_id}?api_key={$this->api_key}"));
+        return Zttp::get($this->url("/rec/user/{$user_id}?api_token={$this->api_token}"));
     }
 
     /**
