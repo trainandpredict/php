@@ -2,14 +2,8 @@
     "name": "trainandpredict/php",
     "description": "A PHP package for interacting with Train and Predict.",
     "type": "library",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/trainandpredict/zttp"
-        }
-    ],
     "require": {
-        "kitetail/zttp": "^1.0"
+        "trainandpredict/zttp": "^1.0"
     },
     "license": "ISC",
     "authors": [
