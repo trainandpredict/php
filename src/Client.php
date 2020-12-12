@@ -32,9 +32,7 @@ class Client
      */
     public function log(int $user_id, int $item_id): ZttpResponse
     {
-        return Zttp::post($this->url("/log/{$user_id}/{$item_id}", [
-            'api_key' => $this->api_key,
-        ]));
+        return Zttp::post($this->url("/log/{$user_id}/{$item_id}?api_key={$this->api_key}"));
     }
 
     /**
@@ -43,9 +41,7 @@ class Client
      */
     public function recommendationsForItem(int $item_id): ZttpResponse
     {
-        return Zttp::get($this->url("/rec/item/{$item_id}", [
-            'api_key' => $this->api_key,
-        ]));
+        return Zttp::get($this->url("/rec/item/{$item_id}?api_key={$this->api_key}"));
     }
 
     /**
@@ -54,9 +50,7 @@ class Client
      */
     public function recommendationsForUser(int $user_id): ZttpResponse
     {
-        return Zttp::get($this->url("/rec/user/{$user_id}", [
-            'api_key' => $this->api_key,
-        ]));
+        return Zttp::get($this->url("/rec/user/{$user_id}?api_key={$this->api_key}"));
     }
 
     /**
