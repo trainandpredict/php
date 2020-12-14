@@ -29,6 +29,12 @@ $tap->log(1234, 5678);
 // Get recommendations for user ID 1234
 $user_rec = $tap->recommendationsForUser(1234);
 
+// The response is a ZttpResponse object
+$user_res = $user_rec->ok() ? $user_rec->json() : null;
+
 // Get recommendations for item ID 5678
 $item_rec = $tap->recommendationsForItem(5678);
+
+// Again we can pull the results out like so
+$item_res = $item_rec->ok() ? $item_rec->json() : null;
 ```
